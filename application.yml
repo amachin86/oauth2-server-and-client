@@ -1,0 +1,23 @@
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+         insuer-uri: "http://127.0.0.1:9001/"
+      client:
+        registration:
+          client-app:
+            provider: spring
+            client-id: client-app
+            client-secret: 12345
+            authorization-grant-type: authorization_code
+            redirect-uri: "http://127.0.0.1:8080/login/authorized"
+            scope:
+              - openid
+              - profile
+              - read
+              - write
+            client-name: client-app
+        provider:
+          spring:
+            insuer-uri: "http://127.0.0.1:9001/"
