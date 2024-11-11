@@ -5,7 +5,7 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          insuer-uri: "http://127.0.0.1:9001"
+          issuer-uri: "http://127.0.0.1:9001"
       client:
         registration:
           client-app:
